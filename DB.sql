@@ -16,7 +16,7 @@ GO
 CREATE TABLE [EventSources]
 (
 	[Id]					[uniqueidentifier]		NOT NULL,
-	[Type]					[nvarchar](255)			NOT NULL,
+	[Type]					[varchar](255)			NOT NULL,
 	[Version]				[int]					NOT NULL
 ) ON [PRIMARY]
 GO
@@ -33,7 +33,6 @@ WITH
 	IGNORE_DUP_KEY				= OFF,
 	DROP_EXISTING				= OFF,
 	ONLINE						= OFF,
-	ALLOW_ROW_LOCKS				= ON,
 	ALLOW_PAGE_LOCKS			= ON
 ) ON [PRIMARY]
 GO
